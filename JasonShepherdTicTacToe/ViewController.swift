@@ -40,6 +40,8 @@ class ViewController: UIViewController {
     var counter = 5
 
 
+    @IBOutlet weak var oHealthImage: UIImageView!
+    @IBOutlet weak var xHealthImage: UIImageView!
     @IBOutlet weak var xTurn: UILabel!
     @IBOutlet weak var oTurn: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
@@ -57,17 +59,18 @@ class ViewController: UIViewController {
             
             
             if activePlayer == 1 {
-                xTurn.text = ""
-                oTurn.text = "Go 0"
+                xTurn.text = "..."
+                oTurn.text = "Go O"
                 
                 image = UIImage(named: "cross.png")!
                 xScore = xScore + squareValue[sender.tag]
+
                 activePlayer = 2
  
             } else {
                 
                 xTurn.text = "Go X"
-                oTurn.text = ""
+                oTurn.text = "..."
                 
                 image = UIImage(named: "circle.png")!
                 oScore = oScore + squareValue[sender.tag]
@@ -103,20 +106,33 @@ class ViewController: UIViewController {
             if ((winsArray[i] & xScore) == winsArray[i]) {
                 xWins += 1
                 winner.text = "X Takes Round \(round)"
+                oHealthImage.image = UIImage(named: "halfhealth.png")
                 round += 1
                 // update the current round
                 roundLabel.text = "Round \(round)"
-                xPlayer.text = "\(xWins)"
+                xPlayer.text = "\(xWins) wins"
+                
+                if xWins == 2 {
+                    oHealthImage.image = UIImage(named: "nohealth.png")
+                    gameOver = true
+                }
                 
                 resetBoard() // clear for next round
             }
             if ((winsArray[i] & oScore) == winsArray[i]) {
                 oWins += 1
                 winner.text = "O Takes Round \(round)"
+                xHealthImage.image = UIImage(named: "halfhealth.png")
                 round += 1
                 // update the current round
                 roundLabel.text = "Round \(round)"
-                oPlayer.text = "\(oWins)"
+                oPlayer.text = "\(oWins) wins"
+                
+                if oWins == 2 {
+                    xHealthImage.image = UIImage(named: "nohealth.png")
+                    gameOver = true
+                }
+                
                 resetBoard() // clear for next round
             }
         }
