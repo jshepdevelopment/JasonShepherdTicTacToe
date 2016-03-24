@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var gameState = [0,0,0,0,0,0,0,0,0]
     
     // arrays to store square and winner values
-    var squareValue = [1,2,3,4,8,16,32,64,128,256]
+    var squareValue = [1,2,4,8,16,32,64,128,256]
     var winsArray = [7,56,448,73,146,292,273,84]
     
     @IBOutlet weak var xPlayer: UILabel!
