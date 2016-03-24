@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  JasonShepherdTicTacToe
 //
-//  Created by Mac on 3/22/16.
+//  Created by Jason Shepherd on 3/22/16.
 //  Copyright © 2016 Salt Lake Community College. All rights reserved.
 //
 
@@ -22,4 +22,3 @@ class ViewController: UIViewController {
 
 
 }
-
