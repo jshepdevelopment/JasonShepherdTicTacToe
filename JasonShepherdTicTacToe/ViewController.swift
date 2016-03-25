@@ -35,11 +35,20 @@ class ViewController: UIViewController {
     var squareValue = [1,2,4,8,16,32,64,128,256]
     var winsArray = [7,56,448,73,146,292,273,84]
 
-    // define a timer and counter var
+    // define a timer and counter var, playing var to halt anim
     var timer = NSTimer()
+    var animTimer = NSTimer()
     var counter = 5
-
-
+    var animCounter = 1
+    var playing = false
+    
+    // positions to store for animation
+    var xPos = 0
+    var yPos = 0
+    
+    //var redImage: UIImage!
+    var redImageArray: [UIImage] = []
+    
     @IBOutlet weak var oHealthImage: UIImageView!
     @IBOutlet weak var xHealthImage: UIImageView!
     @IBOutlet weak var xTurn: UILabel!
@@ -54,17 +63,22 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(sender: AnyObject) {
     
         var image = UIImage()
+
+        xPos = Int(sender.frame.origin.x)
+        yPos = Int(sender.frame.origin.y)
+        
+        // resets animation frame counter
+        startAnimation()
+        playing = true // used to start animation
         
         if gameState[sender.tag] == 0 {
-            
             
             if activePlayer == 1 {
                 xTurn.text = "..."
                 oTurn.text = "Go O"
-                
                 image = UIImage(named: "cross.png")!
                 xScore = xScore + squareValue[sender.tag]
-
+                
                 activePlayer = 2
  
             } else {
@@ -74,16 +88,15 @@ class ViewController: UIViewController {
                 
                 image = UIImage(named: "circle.png")!
                 oScore = oScore + squareValue[sender.tag]
+                
                 activePlayer = 1
             }
             
-            
-      
             // reset counter and game state along with image
             counter = 5
             gameState[sender.tag] = 1
             sender.setImage(image, forState: .Normal)
-            
+
             // get the sum of gameState array for tie game check
             gameStateSum = gameState.reduce(0,combine: +)
             print(gameStateSum)
@@ -142,15 +155,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
-        
         // set initial label values
         xTurn.text = "Go X"
         roundLabel.text = "Round \(round)"
         
-        // create the timer
+        // set images arrays
+        for i in 1...6 {
+            redImageArray.append(UIImage(named: "red0\(i).png")!)
+        }
+        
+        // create the game timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
         
+        // create the animation timer
+        //animTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAnimation"), userInfo: nil, repeats: true)
         
         // check for game over
         if !gameOver {
@@ -182,13 +200,57 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    // update 
+   
+    // update
     func update() {
-        
         // update counter label and number
         counterLabel.text = String(counter)
         counter -= 1
+    }
+    
+    // update
+    /*func updateAnimation() {
+        
+        if activePlayer == 2 && playing {
+            
+        //    redImage = UIImage(named: "red0\(animCounter)")!
+       //     let imageView = UIImageView()
+            
+        //    imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
+        //    view.addSubview(imageView)
+        }
+        
+        if animCounter == 6 {
+            playing = false
+            animCounter = 1
+        }
+        
+        animCounter += 1
+
+       
+    }*/
+    
+    func startAnimation() {
+        
+        let imageView = UIImageView()
+
+        imageView.animationImages = redImageArray
+        imageView.animationDuration = 0.1
+        imageView.animationRepeatCount = 1
+        imageView.startAnimating()
+        
+        imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
+        view.addSubview(imageView)
+
+
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let touch = touches.first {
+            let position :CGPoint = touch.locationInView(view)
+            print(position.x)
+            print(position.y)
+        }
     }
     
     override func didReceiveMemoryWarning() {
