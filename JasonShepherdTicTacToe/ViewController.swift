@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     // vars to track rounds and game over state
     var round = 1
     var neededWins = 2
-    var gameOver = false
     var tieGame = false
     var reset = false
     
@@ -206,18 +205,6 @@ class ViewController: UIViewController {
         // create the game timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
     
-        
-        // check for game over
-        if !gameOver {
-            if xWins == neededWins {
-                winner.text = "X is supreme winner"
-                gameOver = true
-            }
-            if oWins == neededWins {
-                winner.text = "O is supreme winner"
-                gameOver = true
-            }
-        }
     }
 
     // clear the gameboard for next round
@@ -247,6 +234,20 @@ class ViewController: UIViewController {
             sleep(1)
             resetBoard()
             reset = false
+        }
+        if counter < 0 && activePlayer == 2 {
+            winner.text = "Too slow O!"
+            xTurn.text = "Your turn!"
+            oTurn.text = ""
+            activePlayer = 1
+            counter = 5
+        }
+        if counter < 0  && activePlayer == 1 {
+            winner.text = "Too slow X!"
+            xTurn.text = ""
+            oTurn.text = "Your turn!"
+            activePlayer = 2
+            counter = 5
         }
     }
     

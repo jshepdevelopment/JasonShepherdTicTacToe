@@ -41,6 +41,7 @@
 		040EFD571CA6D0EF00778918 /* bomb03.png in Resources */ = {isa = PBXBuildFile; fileRef = 040EFD511CA6D0EF00778918 /* bomb03.png */; };
 		040EFD581CA6D0EF00778918 /* bomb02.png in Resources */ = {isa = PBXBuildFile; fileRef = 040EFD521CA6D0EF00778918 /* bomb02.png */; };
 		040EFD591CA6D0EF00778918 /* bomb01.png in Resources */ = {isa = PBXBuildFile; fileRef = 040EFD531CA6D0EF00778918 /* bomb01.png */; };
+		040EFD671CA6F95700778918 /* tictacsplash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 040EFD661CA6F95700778918 /* tictacsplash.jpg */; };
 		04BA46981CA1C9340005B0D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA46971CA1C9340005B0D8 /* AppDelegate.swift */; };
 		04BA469A1CA1C9340005B0D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA46991CA1C9340005B0D8 /* ViewController.swift */; };
 		04BA469D1CA1C9340005B0D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BA469B1CA1C9340005B0D8 /* Main.storyboard */; };
@@ -103,6 +104,7 @@
 		040EFD511CA6D0EF00778918 /* bomb03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb03.png; sourceTree = "<group>"; };
 		040EFD521CA6D0EF00778918 /* bomb02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb02.png; sourceTree = "<group>"; };
 		040EFD531CA6D0EF00778918 /* bomb01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb01.png; sourceTree = "<group>"; };
+		040EFD661CA6F95700778918 /* tictacsplash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tictacsplash.jpg; sourceTree = "<group>"; };
 		04BA46941CA1C9340005B0D8 /* JasonShepherdTicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JasonShepherdTicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BA46971CA1C9340005B0D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BA46991CA1C9340005B0D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				040EFD451CA6BDAC00778918 /* redmove.wav */,
 				040EFD461CA6BDAC00778918 /* yellowmove.wav */,
 				040EFD391CA6203900778918 /* circle.png */,
+				040EFD661CA6F95700778918 /* tictacsplash.jpg */,
 				040EFD371CA61B1D00778918 /* castle night.jpg */,
 				040EFD3B1CA6204300778918 /* cross.png */,
 				040EFD231CA5D5ED00778918 /* flames.wav */,
@@ -353,6 +356,7 @@
 				040EFD551CA6D0EF00778918 /* bomb05.png in Resources */,
 				040EFD3A1CA6203900778918 /* circle.png in Resources */,
 				040EFD381CA61B1D00778918 /* castle night.jpg in Resources */,
+				040EFD671CA6F95700778918 /* tictacsplash.jpg in Resources */,
 				040EFD1B1CA5C5AF00778918 /* yellow03.png in Resources */,
 				04BA46C61CA2F2690005B0D8 /* tictactoe.png in Resources */,
 				04BA46A21CA1C9340005B0D8 /* LaunchScreen.storyboard in Resources */,
