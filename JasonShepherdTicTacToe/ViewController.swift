@@ -51,12 +51,15 @@ class ViewController: UIViewController {
     var yellowImageArray: [UIImage] = []
     var redWizardImageArray: [UIImage] = []
     var yellowWizardImageArray: [UIImage] = []
+    var bombImageArray: [UIImage] = []
     
     //load sounds
     var yellowSound: NSURL!
     var redSound: NSURL!
-    
+    var music: NSURL!
+
     var audioPlayer = AVAudioPlayer()
+    var musicPlayer = AVAudioPlayer()
     
     @IBOutlet weak var redWizardImage: UIImageView!
     @IBOutlet weak var yellowWizardImage: UIImageView!
@@ -131,6 +134,11 @@ class ViewController: UIViewController {
                 roundLabel.text = "Round \(round)"
                 xPlayer.text = "Score \(xWins)"
                 
+                // bomb red wizard animation
+                yellowWizardImage.animationImages = bombImageArray
+                yellowWizardImage.animationDuration = 0.3
+                yellowWizardImage.animationRepeatCount = 1
+                yellowWizardImage.startAnimating()
                 reset = true//resetBoard() // clear for next round
             }
             if ((winsArray[i] & oScore) == winsArray[i]) {
@@ -140,6 +148,12 @@ class ViewController: UIViewController {
                 // update the current round
                 roundLabel.text = "Round \(round)"
                 oPlayer.text = "Score \(oWins)"
+                
+                // bomb red wizard animation
+                redWizardImage.animationImages = bombImageArray
+                redWizardImage.animationDuration = 0.3
+                redWizardImage.animationRepeatCount = 1
+                redWizardImage.startAnimating()
                 
                 reset = true//resetBoard() // clear for next round
             }
@@ -170,8 +184,24 @@ class ViewController: UIViewController {
             yellowWizardImageArray.append(UIImage(named: "yellowwizard0\(i).png")!)
         }
         
-        yellowSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("frost", ofType: "wav")!)
-        redSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("flames", ofType: "wav")!)
+        for i in 1...4 {
+            bombImageArray.append(UIImage(named: "bomb0\(i).png")!)
+        }
+        
+        // loading sounds and music
+        yellowSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("redmove", ofType: "wav")!)
+        redSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("yellowmove", ofType: "wav")!)
+        music = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("elements", ofType: "mp3")!)
+        
+        // play the music or catch an error
+        do {
+            try musicPlayer = AVAudioPlayer(contentsOfURL: music)
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.prepareToPlay()
+            musicPlayer.play()
+        } catch {
+            print("error playing sound")
+        }
         
         // create the game timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
