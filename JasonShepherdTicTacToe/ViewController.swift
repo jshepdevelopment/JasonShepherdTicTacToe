@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -35,12 +36,10 @@ class ViewController: UIViewController {
     var squareValue = [1,2,4,8,16,32,64,128,256]
     var winsArray = [7,56,448,73,146,292,273,84]
 
-    // define a timer and counter var, playing var to halt anim
+    // define a timer and counter var
     var timer = NSTimer()
     var animTimer = NSTimer()
     var counter = 5
-    var animCounter = 1
-    var playing = false
     
     // positions to store for animation
     var xPos = 0
@@ -48,9 +47,14 @@ class ViewController: UIViewController {
     
     //var redImage: UIImage!
     var redImageArray: [UIImage] = []
+    var yellowImageArray: [UIImage] = []
     
-    @IBOutlet weak var oHealthImage: UIImageView!
-    @IBOutlet weak var xHealthImage: UIImageView!
+    //load sounds
+    var yellowSound: NSURL!
+    var redSound: NSURL!
+    
+    var audioPlayer = AVAudioPlayer()
+    
     @IBOutlet weak var xTurn: UILabel!
     @IBOutlet weak var oTurn: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
@@ -64,38 +68,36 @@ class ViewController: UIViewController {
     
         var image = UIImage()
 
+        // set button positions to display animations
         xPos = Int(sender.frame.origin.x)
         yPos = Int(sender.frame.origin.y)
-        
-        // resets animation frame counter
-        startAnimation()
-        playing = true // used to start animation
         
         if gameState[sender.tag] == 0 {
             
             if activePlayer == 1 {
-                xTurn.text = "..."
-                oTurn.text = "Go O"
+                // update UI for x player
+                xTurn.text = ""
+                oTurn.text = "Your turn!"
                 image = UIImage(named: "cross.png")!
                 xScore = xScore + squareValue[sender.tag]
-                
-                activePlayer = 2
+                startRedAnimation() // play the red animation and sound for player 1
+                activePlayer = 2 // change active player
  
             } else {
-                
-                xTurn.text = "Go X"
-                oTurn.text = "..."
-                
+                // update UI
+                xTurn.text = "Your turn!"
+                oTurn.text = ""
                 image = UIImage(named: "circle.png")!
                 oScore = oScore + squareValue[sender.tag]
-                
-                activePlayer = 1
+                startYellowAnimation() // play the yellow animation and sound for player
+                activePlayer = 1 // change active player
             }
             
             // reset counter and game state along with image
             counter = 5
             gameState[sender.tag] = 1
             sender.setImage(image, forState: .Normal)
+            
 
             // get the sum of gameState array for tie game check
             gameStateSum = gameState.reduce(0,combine: +)
@@ -119,32 +121,20 @@ class ViewController: UIViewController {
             if ((winsArray[i] & xScore) == winsArray[i]) {
                 xWins += 1
                 winner.text = "X Takes Round \(round)"
-                oHealthImage.image = UIImage(named: "halfhealth.png")
                 round += 1
                 // update the current round
                 roundLabel.text = "Round \(round)"
-                xPlayer.text = "\(xWins) wins"
-                
-                if xWins == 2 {
-                    oHealthImage.image = UIImage(named: "nohealth.png")
-                    gameOver = true
-                }
+                xPlayer.text = "Score \(xWins)"
                 
                 resetBoard() // clear for next round
             }
             if ((winsArray[i] & oScore) == winsArray[i]) {
                 oWins += 1
                 winner.text = "O Takes Round \(round)"
-                xHealthImage.image = UIImage(named: "halfhealth.png")
                 round += 1
                 // update the current round
                 roundLabel.text = "Round \(round)"
-                oPlayer.text = "\(oWins) wins"
-                
-                if oWins == 2 {
-                    xHealthImage.image = UIImage(named: "nohealth.png")
-                    gameOver = true
-                }
+                oPlayer.text = "Score \(oWins)"
                 
                 resetBoard() // clear for next round
             }
@@ -156,19 +146,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // set initial label values
-        xTurn.text = "Go X"
+        xTurn.text = "Your turn!"
         roundLabel.text = "Round \(round)"
         
-        // set images arrays
+        // set animation images arrays
         for i in 1...6 {
             redImageArray.append(UIImage(named: "red0\(i).png")!)
         }
+        // set animation images arrays
+        for i in 1...6 {
+            yellowImageArray.append(UIImage(named: "yellow0\(i).png")!)
+        }
+
+        yellowSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("frost", ofType: "wav")!)
+        redSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("flames", ofType: "wav")!)
         
         // create the game timer
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
-        
-        // create the animation timer
-        //animTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAnimation"), userInfo: nil, repeats: true)
+    
         
         // check for game over
         if !gameOver {
@@ -208,49 +203,56 @@ class ViewController: UIViewController {
         counter -= 1
     }
     
-    // update
-    /*func updateAnimation() {
+    // start the red animation
+    func startRedAnimation() {
         
-        if activePlayer == 2 && playing {
-            
-        //    redImage = UIImage(named: "red0\(animCounter)")!
-       //     let imageView = UIImageView()
-            
-        //    imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
-        //    view.addSubview(imageView)
-        }
-        
-        if animCounter == 6 {
-            playing = false
-            animCounter = 1
-        }
-        
-        animCounter += 1
-
-       
-    }*/
-    
-    func startAnimation() {
-        
+        // prepare imageView for the animation
         let imageView = UIImageView()
 
         imageView.animationImages = redImageArray
-        imageView.animationDuration = 0.1
+        imageView.animationDuration = 0.3
         imageView.animationRepeatCount = 1
         imageView.startAnimating()
         
+        // add the imageView according to button position
         imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
         view.addSubview(imageView)
-
+        
+        // play the audio or catch an error
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: redSound)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch {
+            print("error playing sound")
+        }
 
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let touch = touches.first {
-            let position :CGPoint = touch.locationInView(view)
-            print(position.x)
-            print(position.y)
+    // start the yellow animation
+    func startYellowAnimation() {
+        
+        // prepare imageView for the animation
+        let imageView = UIImageView()
+        
+        imageView.animationImages = yellowImageArray
+        imageView.animationDuration = 0.3
+        imageView.animationRepeatCount = 1
+        imageView.startAnimating()
+        
+        // add the imageView according to button position
+        imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
+        view.addSubview(imageView)
+        
+        // play the audio or catch an error
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: yellowSound)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch {
+            print("error playing sound")
         }
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -19,6 +19,156 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="castle night.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2eS-IO-NJv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-5C-sAw">
+                                <rect key="frame" x="295" y="0.0" width="80" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="TsT-xR-zkH"/>
+                                    <constraint firstAttribute="height" constant="76" id="aHJ-ZC-Eky"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cross.png" translatesAutoresizingMaskIntoConstraints="NO" id="rTC-Bq-sZY">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="fsG-EL-lIt"/>
+                                    <constraint firstAttribute="width" constant="80" id="sHe-xp-KXd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4W-V2-3tR">
+                                <rect key="frame" x="168" y="28" width="37" height="41"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="39"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-lR-asB">
+                                <rect key="frame" x="157" y="597" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUr-wO-UtI">
+                                <rect key="frame" x="275" y="96" width="100" height="21"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.75482219827586206" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-By-ypP">
+                                <rect key="frame" x="111" y="626" width="162" height="21"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liw-Tl-UUu">
+                                <rect key="frame" x="275" y="71" width="100" height="25"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.75" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-xu-umt">
+                                <rect key="frame" x="0.0" y="71" width="100" height="25"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.75479525862068964" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wac-VD-7b9">
+                                <rect key="frame" x="275" y="418" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8xo-8N-vaj"/>
+                                    <constraint firstAttribute="height" constant="100" id="F72-fm-Sj8"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghr-pG-SUI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-0n-ius">
+                                <rect key="frame" x="137" y="418" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2yO-9H-zrC"/>
+                                    <constraint firstAttribute="width" constant="100" id="aqx-6X-CG5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucx-gt-aMT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EE-uv-f63">
+                                <rect key="frame" x="0.0" y="418" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BFn-hz-E7h"/>
+                                    <constraint firstAttribute="height" constant="100" id="kvF-JU-vNe"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWw-mC-RqJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr2-dE-kW0">
+                                <rect key="frame" x="275" y="277" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="REP-hx-GwN"/>
+                                    <constraint firstAttribute="height" constant="100" id="jAq-BT-paR"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiN-mn-heU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-aH-OKS">
+                                <rect key="frame" x="145" y="277" width="100" height="100"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTy-fF-9pG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-PY-Qzj">
+                                <rect key="frame" x="0.0" y="277" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0eL-OC-aCr"/>
+                                    <constraint firstAttribute="width" constant="100" id="hcS-b4-Klm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0R-pi-VTv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXI-8P-4QH">
+                                <rect key="frame" x="275" y="136" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="1lV-CJ-sNQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="HF4-FK-A1Z"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9L2-3W-uNg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23M-QY-bTI">
+                                <rect key="frame" x="137" y="136" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HSL-vF-Ef9"/>
+                                    <constraint firstAttribute="width" constant="100" id="VT4-Oy-q6d"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiV-vy-sgR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-PC-Ycv">
+                                <rect key="frame" x="0.0" y="136" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4UY-To-fcu"/>
+                                    <constraint firstAttribute="height" constant="100" id="VWy-xc-8yz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PA4-lG-7U2"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tictactoe.png" translatesAutoresizingMaskIntoConstraints="NO" id="UCP-9H-VuL">
                                 <rect key="frame" x="0.0" y="136" width="375" height="382"/>
                                 <constraints>
@@ -37,190 +187,63 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-PC-Ycv">
-                                <rect key="frame" x="0.0" y="136" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="4UY-To-fcu"/>
-                                    <constraint firstAttribute="height" constant="100" id="VWy-xc-8yz"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PA4-lG-7U2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23M-QY-bTI">
-                                <rect key="frame" x="137" y="136" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="HSL-vF-Ef9"/>
-                                    <constraint firstAttribute="width" constant="100" id="VT4-Oy-q6d"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiV-vy-sgR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXI-8P-4QH">
-                                <rect key="frame" x="275" y="136" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="1lV-CJ-sNQ"/>
-                                    <constraint firstAttribute="height" constant="100" id="HF4-FK-A1Z"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9L2-3W-uNg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-PY-Qzj">
-                                <rect key="frame" x="0.0" y="277" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="0eL-OC-aCr"/>
-                                    <constraint firstAttribute="width" constant="100" id="hcS-b4-Klm"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0R-pi-VTv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMO-aH-OKS">
-                                <rect key="frame" x="145" y="277" width="100" height="100"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTy-fF-9pG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jr2-dE-kW0">
-                                <rect key="frame" x="275" y="277" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="REP-hx-GwN"/>
-                                    <constraint firstAttribute="height" constant="100" id="jAq-BT-paR"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiN-mn-heU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EE-uv-f63">
-                                <rect key="frame" x="0.0" y="418" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="BFn-hz-E7h"/>
-                                    <constraint firstAttribute="height" constant="100" id="kvF-JU-vNe"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWw-mC-RqJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cL-0n-ius">
-                                <rect key="frame" x="137" y="418" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2yO-9H-zrC"/>
-                                    <constraint firstAttribute="width" constant="100" id="aqx-6X-CG5"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ucx-gt-aMT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wac-VD-7b9">
-                                <rect key="frame" x="275" y="418" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="8xo-8N-vaj"/>
-                                    <constraint firstAttribute="height" constant="100" id="F72-fm-Sj8"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ghr-pG-SUI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 wins" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7b-xu-umt">
-                                <rect key="frame" x="0.0" y="71" width="55" height="24"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgM-iL-GwM">
+                                <rect key="frame" x="0.0" y="96" width="100" height="21"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.75029633620689651" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 wins" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="liw-Tl-UUu">
-                                <rect key="frame" x="325" y="67" width="50" height="32"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-By-ypP">
-                                <rect key="frame" x="111" y="626" width="162" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgM-iL-GwM">
-                                <rect key="frame" x="0.0" y="96" width="80" height="21"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUr-wO-UtI">
-                                <rect key="frame" x="295" y="96" width="80" height="21"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fullhealth.png" translatesAutoresizingMaskIntoConstraints="NO" id="mt8-nd-rxs">
-                                <rect key="frame" x="0.0" y="43" width="150" height="29"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fullhealth.png" translatesAutoresizingMaskIntoConstraints="NO" id="KSJ-PH-KZy">
-                                <rect key="frame" x="225" y="43" width="150" height="29"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4W-V2-3tR">
-                                <rect key="frame" x="170" y="43" width="35" height="35"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-lR-asB">
-                                <rect key="frame" x="157" y="597" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bHh-PC-Ycv" firstAttribute="top" secondItem="UCP-9H-VuL" secondAttribute="top" id="0JN-pa-9MU"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Pj-m6-479"/>
                             <constraint firstItem="23M-QY-bTI" firstAttribute="top" secondItem="UCP-9H-VuL" secondAttribute="top" id="0eG-8E-4gb"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="top" secondItem="23M-QY-bTI" secondAttribute="bottom" constant="41" id="2d3-Am-Z3S"/>
-                            <constraint firstItem="aUr-wO-UtI" firstAttribute="top" secondItem="KSJ-PH-KZy" secondAttribute="bottom" constant="24" id="33l-hg-2fW"/>
+                            <constraint firstItem="liw-Tl-UUu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="3ck-T4-O0N"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="44e-PF-BNY"/>
+                            <constraint firstItem="aUr-wO-UtI" firstAttribute="top" secondItem="liw-Tl-UUu" secondAttribute="bottom" id="5ka-BR-F6E"/>
+                            <constraint firstItem="Sfe-5C-sAw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6Th-yW-Drn"/>
                             <constraint firstItem="wXI-8P-4QH" firstAttribute="top" secondItem="UCP-9H-VuL" secondAttribute="top" id="7D0-X3-tZ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="liw-Tl-UUu" secondAttribute="trailing" constant="-20" id="7cD-b9-bZN"/>
-                            <constraint firstItem="liw-Tl-UUu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="7sO-eW-jHt"/>
+                            <constraint firstItem="rTC-Bq-sZY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="7cm-IB-juH"/>
+                            <constraint firstItem="rTC-Bq-sZY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9Xp-1w-zWQ"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F02-L2-noL"/>
                             <constraint firstItem="jr2-dE-kW0" firstAttribute="trailing" secondItem="UCP-9H-VuL" secondAttribute="trailing" id="GVv-ao-ukr"/>
                             <constraint firstItem="23M-QY-bTI" firstAttribute="centerX" secondItem="UCP-9H-VuL" secondAttribute="centerX" id="Hdk-cW-ugt"/>
+                            <constraint firstItem="kgM-iL-GwM" firstAttribute="top" secondItem="U7b-xu-umt" secondAttribute="bottom" id="KD6-m3-oXD"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="leading" secondItem="SJ3-PY-Qzj" secondAttribute="trailing" constant="45" id="MBS-wc-42d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sfe-5C-sAw" secondAttribute="trailing" constant="-20" id="NTf-Gi-n5s"/>
                             <constraint firstItem="SJ3-PY-Qzj" firstAttribute="centerY" secondItem="UCP-9H-VuL" secondAttribute="centerY" id="Ngb-s6-nMG"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="bottom" secondItem="jr2-dE-kW0" secondAttribute="bottom" id="NxT-7C-HaI"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="leadingMargin" secondItem="PMO-aH-OKS" secondAttribute="centerX" constant="-187" id="PEg-SS-0yD"/>
                             <constraint firstItem="0EE-uv-f63" firstAttribute="bottom" secondItem="UCP-9H-VuL" secondAttribute="bottom" id="R6c-U6-ksC"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SUG-7H-1B1"/>
                             <constraint firstItem="wXI-8P-4QH" firstAttribute="trailing" secondItem="UCP-9H-VuL" secondAttribute="trailing" id="T5U-L4-e63"/>
-                            <constraint firstItem="m4W-V2-3tR" firstAttribute="leading" secondItem="mt8-nd-rxs" secondAttribute="trailing" constant="20" id="TCB-OS-fwW"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="leading" secondItem="bHh-PC-Ycv" secondAttribute="leading" id="UNk-U7-YXM"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UfA-PU-qiq"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="centerY" secondItem="UCP-9H-VuL" secondAttribute="centerY" id="Z5Z-K4-bba"/>
                             <constraint firstItem="Hi1-By-ypP" firstAttribute="top" secondItem="kHY-lR-asB" secondAttribute="bottom" constant="8" id="ZLd-Pr-Md9"/>
-                            <constraint firstItem="KSJ-PH-KZy" firstAttribute="leading" secondItem="m4W-V2-3tR" secondAttribute="trailing" constant="20" id="bVm-tt-gYv"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-6.5" id="bYI-dD-92B"/>
                             <constraint firstItem="wac-VD-7b9" firstAttribute="bottom" secondItem="UCP-9H-VuL" secondAttribute="bottom" id="cHZ-N3-hHX"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="top" secondItem="jr2-dE-kW0" secondAttribute="top" id="dra-Bx-8fo"/>
-                            <constraint firstItem="mt8-nd-rxs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="etJ-Ys-rd7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hi1-By-ypP" secondAttribute="bottom" constant="20" id="gvO-D9-JHX"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="top" secondItem="bHh-PC-Ycv" secondAttribute="top" id="hJL-II-lm0"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="leading" secondItem="SJ3-PY-Qzj" secondAttribute="trailing" constant="-100" id="l29-gZ-lBq"/>
-                            <constraint firstItem="mt8-nd-rxs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="nHq-D0-bbb"/>
                             <constraint firstItem="jr2-dE-kW0" firstAttribute="centerY" secondItem="UCP-9H-VuL" secondAttribute="centerY" id="oAD-eF-8N0"/>
-                            <constraint firstItem="U7b-xu-umt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="q9V-5E-m0l"/>
+                            <constraint firstItem="U7b-xu-umt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="pG4-hN-OLS"/>
                             <constraint firstItem="jr2-dE-kW0" firstAttribute="leading" secondItem="PMO-aH-OKS" secondAttribute="trailing" constant="30" id="r9H-p3-WjD"/>
                             <constraint firstItem="5cL-0n-ius" firstAttribute="centerX" secondItem="UCP-9H-VuL" secondAttribute="centerX" id="rjh-9a-afX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aUr-wO-UtI" secondAttribute="trailing" constant="-20" id="sJP-ld-juB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KSJ-PH-KZy" secondAttribute="trailing" constant="-20" id="saG-Dx-oFO"/>
-                            <constraint firstItem="m4W-V2-3tR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u8H-JM-SC0"/>
                             <constraint firstItem="5cL-0n-ius" firstAttribute="bottom" secondItem="UCP-9H-VuL" secondAttribute="bottom" id="uip-et-wdv"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="leading" secondItem="0EE-uv-f63" secondAttribute="trailing" constant="-100" id="vz2-Ls-0HV"/>
+                            <constraint firstItem="m4W-V2-3tR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wtn-eA-H6A"/>
                             <constraint firstItem="kgM-iL-GwM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="x4G-Tx-ZsA"/>
                             <constraint firstItem="wac-VD-7b9" firstAttribute="trailing" secondItem="UCP-9H-VuL" secondAttribute="trailing" id="xYt-Yl-Kwt"/>
                             <constraint firstItem="U7b-xu-umt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xZh-4Y-kxj"/>
-                            <constraint firstItem="kgM-iL-GwM" firstAttribute="top" secondItem="U7b-xu-umt" secondAttribute="bottom" constant="1" id="zET-ek-L5b"/>
-                            <constraint firstItem="KSJ-PH-KZy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="23" id="zvX-Fm-Ldv"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -235,23 +258,23 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="counterLabel" destination="m4W-V2-3tR" id="vPe-pc-EhK"/>
-                        <outlet property="oHealthImage" destination="KSJ-PH-KZy" id="Jny-04-gYR"/>
                         <outlet property="oPlayer" destination="liw-Tl-UUu" id="GMp-pY-w4d"/>
                         <outlet property="oTurn" destination="aUr-wO-UtI" id="csd-mK-DaN"/>
                         <outlet property="roundLabel" destination="kHY-lR-asB" id="lAe-8c-IAg"/>
                         <outlet property="winner" destination="Hi1-By-ypP" id="kzg-60-D5s"/>
-                        <outlet property="xHealthImage" destination="mt8-nd-rxs" id="IKp-pq-ZEp"/>
                         <outlet property="xPlayer" destination="U7b-xu-umt" id="0z7-3U-9r3"/>
                         <outlet property="xTurn" destination="kgM-iL-GwM" id="oPF-qD-ERo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.5" y="335.5"/>
+            <point key="canvasLocation" x="378.5" y="305.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="fullhealth.png" width="150" height="29"/>
+        <image name="castle night.jpg" width="1024" height="1024"/>
+        <image name="circle.png" width="140" height="140"/>
+        <image name="cross.png" width="140" height="140"/>
         <image name="tictactoe.png" width="385" height="385"/>
     </resources>
 </document>
