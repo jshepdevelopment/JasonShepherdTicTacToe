@@ -44,9 +44,9 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Round" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-lR-asB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Round 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHY-lR-asB">
                                 <rect key="frame" x="157" y="597" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -59,8 +59,17 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgM-iL-GwM">
+                                <rect key="frame" x="0.0" y="96" width="100" height="21"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.75029633620689651" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi1-By-ypP">
-                                <rect key="frame" x="111" y="626" width="162" height="21"/>
+                                <rect key="frame" x="145" y="626" width="92" height="21"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -187,15 +196,12 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgM-iL-GwM">
-                                <rect key="frame" x="0.0" y="96" width="100" height="21"/>
-                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.75029633620689651" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="23"/>
-                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="redwizard01.png" translatesAutoresizingMaskIntoConstraints="NO" id="XBh-19-FZG">
+                                <rect key="frame" x="12" y="518" width="100" height="100"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="yellowwizard01.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wsm-HM-hNg">
+                                <rect key="frame" x="263" y="518" width="100" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -210,11 +216,14 @@
                             <constraint firstItem="wXI-8P-4QH" firstAttribute="top" secondItem="UCP-9H-VuL" secondAttribute="top" id="7D0-X3-tZ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="liw-Tl-UUu" secondAttribute="trailing" constant="-20" id="7cD-b9-bZN"/>
                             <constraint firstItem="rTC-Bq-sZY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="7cm-IB-juH"/>
+                            <constraint firstItem="kHY-lR-asB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7nS-fR-UTD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XBh-19-FZG" secondAttribute="bottom" constant="49" id="8i6-S1-GiX"/>
                             <constraint firstItem="rTC-Bq-sZY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9Xp-1w-zWQ"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F02-L2-noL"/>
                             <constraint firstItem="jr2-dE-kW0" firstAttribute="trailing" secondItem="UCP-9H-VuL" secondAttribute="trailing" id="GVv-ao-ukr"/>
                             <constraint firstItem="23M-QY-bTI" firstAttribute="centerX" secondItem="UCP-9H-VuL" secondAttribute="centerX" id="Hdk-cW-ugt"/>
                             <constraint firstItem="kgM-iL-GwM" firstAttribute="top" secondItem="U7b-xu-umt" secondAttribute="bottom" id="KD6-m3-oXD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wsm-HM-hNg" secondAttribute="bottom" constant="49" id="Kdj-bj-9Sk"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="leading" secondItem="SJ3-PY-Qzj" secondAttribute="trailing" constant="45" id="MBS-wc-42d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sfe-5C-sAw" secondAttribute="trailing" constant="-20" id="NTf-Gi-n5s"/>
                             <constraint firstItem="SJ3-PY-Qzj" firstAttribute="centerY" secondItem="UCP-9H-VuL" secondAttribute="centerY" id="Ngb-s6-nMG"/>
@@ -227,9 +236,11 @@
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UfA-PU-qiq"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="centerY" secondItem="UCP-9H-VuL" secondAttribute="centerY" id="Z5Z-K4-bba"/>
                             <constraint firstItem="Hi1-By-ypP" firstAttribute="top" secondItem="kHY-lR-asB" secondAttribute="bottom" constant="8" id="ZLd-Pr-Md9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wsm-HM-hNg" secondAttribute="trailing" constant="-8" id="bRQ-FT-kI0"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-6.5" id="bYI-dD-92B"/>
                             <constraint firstItem="wac-VD-7b9" firstAttribute="bottom" secondItem="UCP-9H-VuL" secondAttribute="bottom" id="cHZ-N3-hHX"/>
                             <constraint firstItem="PMO-aH-OKS" firstAttribute="top" secondItem="jr2-dE-kW0" secondAttribute="top" id="dra-Bx-8fo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wsm-HM-hNg" secondAttribute="trailing" constant="-8" id="g8b-RC-rhw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hi1-By-ypP" secondAttribute="bottom" constant="20" id="gvO-D9-JHX"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="top" secondItem="bHh-PC-Ycv" secondAttribute="top" id="hJL-II-lm0"/>
                             <constraint firstItem="UCP-9H-VuL" firstAttribute="leading" secondItem="SJ3-PY-Qzj" secondAttribute="trailing" constant="-100" id="l29-gZ-lBq"/>
@@ -244,6 +255,7 @@
                             <constraint firstItem="kgM-iL-GwM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="x4G-Tx-ZsA"/>
                             <constraint firstItem="wac-VD-7b9" firstAttribute="trailing" secondItem="UCP-9H-VuL" secondAttribute="trailing" id="xYt-Yl-Kwt"/>
                             <constraint firstItem="U7b-xu-umt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xZh-4Y-kxj"/>
+                            <constraint firstItem="XBh-19-FZG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="y6g-Cy-atu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -260,10 +272,12 @@
                         <outlet property="counterLabel" destination="m4W-V2-3tR" id="vPe-pc-EhK"/>
                         <outlet property="oPlayer" destination="liw-Tl-UUu" id="GMp-pY-w4d"/>
                         <outlet property="oTurn" destination="aUr-wO-UtI" id="csd-mK-DaN"/>
+                        <outlet property="redWizardImage" destination="XBh-19-FZG" id="7Xa-0d-3Ls"/>
                         <outlet property="roundLabel" destination="kHY-lR-asB" id="lAe-8c-IAg"/>
                         <outlet property="winner" destination="Hi1-By-ypP" id="kzg-60-D5s"/>
                         <outlet property="xPlayer" destination="U7b-xu-umt" id="0z7-3U-9r3"/>
                         <outlet property="xTurn" destination="kgM-iL-GwM" id="oPF-qD-ERo"/>
+                        <outlet property="yellowWizardImage" destination="Wsm-HM-hNg" id="iJ8-tS-njF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -275,6 +289,8 @@
         <image name="castle night.jpg" width="1024" height="1024"/>
         <image name="circle.png" width="140" height="140"/>
         <image name="cross.png" width="140" height="140"/>
+        <image name="redwizard01.png" width="80" height="47"/>
         <image name="tictactoe.png" width="385" height="385"/>
+        <image name="yellowwizard01.png" width="80" height="47"/>
     </resources>
 </document>

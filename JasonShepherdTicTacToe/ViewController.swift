@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     var neededWins = 2
     var gameOver = false
     var tieGame = false
+    var reset = false
     
     // each occurance is a square on the board
     var gameState = [0,0,0,0,0,0,0,0,0]
@@ -48,6 +49,8 @@ class ViewController: UIViewController {
     //var redImage: UIImage!
     var redImageArray: [UIImage] = []
     var yellowImageArray: [UIImage] = []
+    var redWizardImageArray: [UIImage] = []
+    var yellowWizardImageArray: [UIImage] = []
     
     //load sounds
     var yellowSound: NSURL!
@@ -55,6 +58,8 @@ class ViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
     
+    @IBOutlet weak var redWizardImage: UIImageView!
+    @IBOutlet weak var yellowWizardImage: UIImageView!
     @IBOutlet weak var xTurn: UILabel!
     @IBOutlet weak var oTurn: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
@@ -109,7 +114,7 @@ class ViewController: UIViewController {
                 round += 1
                 // update the current round
                 roundLabel.text = "Round \(round)"
-                resetBoard() // clear for next round
+                reset = true//resetBoard() // clear for next round
             }
             
         }
@@ -126,7 +131,7 @@ class ViewController: UIViewController {
                 roundLabel.text = "Round \(round)"
                 xPlayer.text = "Score \(xWins)"
                 
-                resetBoard() // clear for next round
+                reset = true//resetBoard() // clear for next round
             }
             if ((winsArray[i] & oScore) == winsArray[i]) {
                 oWins += 1
@@ -136,7 +141,7 @@ class ViewController: UIViewController {
                 roundLabel.text = "Round \(round)"
                 oPlayer.text = "Score \(oWins)"
                 
-                resetBoard() // clear for next round
+                reset = true//resetBoard() // clear for next round
             }
         }
     }
@@ -153,11 +158,18 @@ class ViewController: UIViewController {
         for i in 1...6 {
             redImageArray.append(UIImage(named: "red0\(i).png")!)
         }
+        for i in 1...4 {
+            redWizardImageArray.append(UIImage(named: "redwizard0\(i).png")!)
+        }
+        
         // set animation images arrays
         for i in 1...6 {
             yellowImageArray.append(UIImage(named: "yellow0\(i).png")!)
         }
-
+        for i in 1...4 {
+            yellowWizardImageArray.append(UIImage(named: "yellowwizard0\(i).png")!)
+        }
+        
         yellowSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("frost", ofType: "wav")!)
         redSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("flames", ofType: "wav")!)
         
@@ -201,6 +213,11 @@ class ViewController: UIViewController {
         // update counter label and number
         counterLabel.text = String(counter)
         counter -= 1
+        if reset {
+            sleep(1)
+            resetBoard()
+            reset = false
+        }
     }
     
     // start the red animation
@@ -213,6 +230,11 @@ class ViewController: UIViewController {
         imageView.animationDuration = 0.3
         imageView.animationRepeatCount = 1
         imageView.startAnimating()
+        
+        redWizardImage.animationImages = redWizardImageArray
+        redWizardImage.animationDuration = 0.3
+        redWizardImage.animationRepeatCount = 1
+        redWizardImage.startAnimating()
         
         // add the imageView according to button position
         imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
@@ -239,6 +261,11 @@ class ViewController: UIViewController {
         imageView.animationDuration = 0.3
         imageView.animationRepeatCount = 1
         imageView.startAnimating()
+        
+        yellowWizardImage.animationImages = yellowWizardImageArray
+        yellowWizardImage.animationDuration = 0.3
+        yellowWizardImage.animationRepeatCount = 1
+        yellowWizardImage.startAnimating()
         
         // add the imageView according to button position
         imageView.frame = CGRect(x: xPos, y: yPos, width: 100, height: 100)
