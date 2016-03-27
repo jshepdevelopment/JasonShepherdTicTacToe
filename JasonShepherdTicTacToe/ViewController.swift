@@ -55,6 +55,7 @@ class ViewController: UIViewController {
     //load sounds
     var yellowSound: NSURL!
     var redSound: NSURL!
+    var winSound: NSURL!
     var music: NSURL!
 
     var audioPlayer = AVAudioPlayer()
@@ -135,9 +136,18 @@ class ViewController: UIViewController {
                 
                 // bomb red wizard animation
                 yellowWizardImage.animationImages = bombImageArray
-                yellowWizardImage.animationDuration = 0.3
+                yellowWizardImage.animationDuration = 0.5
                 yellowWizardImage.animationRepeatCount = 1
                 yellowWizardImage.startAnimating()
+                
+                // play the audio or catch an error
+                do {
+                    try audioPlayer = AVAudioPlayer(contentsOfURL: winSound)
+                    audioPlayer.prepareToPlay()
+                    audioPlayer.play()
+                } catch {
+                    print("error playing sound")
+                }
                 reset = true//resetBoard() // clear for next round
             }
             if ((winsArray[i] & oScore) == winsArray[i]) {
@@ -150,10 +160,18 @@ class ViewController: UIViewController {
                 
                 // bomb red wizard animation
                 redWizardImage.animationImages = bombImageArray
-                redWizardImage.animationDuration = 0.3
+                redWizardImage.animationDuration = 0.5
                 redWizardImage.animationRepeatCount = 1
                 redWizardImage.startAnimating()
                 
+                // play the audio or catch an error
+                do {
+                    try audioPlayer = AVAudioPlayer(contentsOfURL: winSound)
+                    audioPlayer.prepareToPlay()
+                    audioPlayer.play()
+                } catch {
+                    print("error playing sound")
+                }
                 reset = true//resetBoard() // clear for next round
             }
         }
@@ -190,7 +208,8 @@ class ViewController: UIViewController {
         // loading sounds and music
         yellowSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("redmove", ofType: "wav")!)
         redSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("yellowmove", ofType: "wav")!)
-        music = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("elements", ofType: "mp3")!)
+        winSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("win", ofType: "wav")!)
+        music = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bgmusic", ofType: "mp3")!)
         
         // play the music or catch an error
         do {
